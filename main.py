@@ -62,7 +62,7 @@ class MainApp(MDApp):
     task_list_dialog = None
     def build(self):
         # Setting theme to my favorite theme
-        self.theme_cls.primary_palette = "Orange"
+        self.theme_cls.primary_palette = "Blue"
         
     # Showing the task dialog to add tasks 
     def show_task_dialog(self):
