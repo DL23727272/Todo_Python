@@ -87,7 +87,7 @@ class MainApp(MDApp):
 
             if completed_tasks != []:
                 for task in completed_tasks:
-                    add_task = ListItemWithCheckbox(pk=task[0],text='[s]'+task[1]+'[/s]', secondary_text=task[2])
+                    add_task = ListItemWithCheckbox(pk=task[0],text='[s]'+task[1]+'[/s]', secondary_text=task[2]) #strike
                     add_task.ids.check.active = True
                     self.root.ids.container.add_widget(add_task)
         except Exception as e:
