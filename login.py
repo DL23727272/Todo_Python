@@ -6,11 +6,10 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.core.window import Window
 from main import MainApp
 import subprocess
-
-
 import os
 
 Window.clearcolor = (1, 0, 0, 1)
+
 username = "DL"
 password = "123"
 
