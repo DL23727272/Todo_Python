@@ -5,8 +5,14 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.core.window import Window
 from main import MainApp
+import subprocess
+
+
+import os
 
 Window.clearcolor = (1, 0, 0, 1)
+username = "DL"
+password = "123"
 
 class LoginScreen(Screen):
     def __init__(self, **kwargs):
@@ -31,12 +37,16 @@ class LoginScreen(Screen):
         self.successful_login = False
 
     def login(self, instance):
-        username = self.username_input.text
-        password = self.password_input.text
+        entered_username = self.username_input.text
+        entered_password = self.password_input.text
 
-        if username == 'DL' and password == '123':
+        if entered_username == username and entered_password == password:
             self.result_label.text = 'GO!'
-            # self.manager.current = 'main_screen'
+            # Open the main.py application
+            subprocess.Popen(["python", "main.py"])
+
+            # Close the login.py application
+            os._exit(0)
         elif username == '' and password == '':
             self.result_label.text = 'Empty!'
         elif username != 'DL' or password != '123':
