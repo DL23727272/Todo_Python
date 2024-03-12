@@ -7,6 +7,9 @@ from kivymd.uix.pickers import MDDatePicker
 from kivymd.uix.list import TwoLineAvatarIconListItem, ILeftBodyTouch
 from kivymd.uix.selectioncontrol import MDCheckbox
 
+import subprocess
+import os
+
 from datetime import datetime
 
 # To be added after creating the database
@@ -105,6 +108,10 @@ class MainApp(MDApp):
         # return the created task details and create a list item
         self.root.ids['container'].add_widget(ListItemWithCheckbox(pk=created_task[0], text='[b]'+created_task[1]+'[/b]', secondary_text=created_task[2]))
         task.text = ''
+        
+    def logout_button(self):
+         subprocess.Popen(["python", "login.py"])
+         os._exit(0)
 
 if __name__ == '__main__':
     app = MainApp()

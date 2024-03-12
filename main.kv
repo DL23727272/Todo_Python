@@ -20,6 +20,12 @@ MDFloatLayout:
         elevation_normal: 12
         pos_hint: {'x': .45 , 'y': .04}
 
+    MDFloatingActionButton:
+        icon: 'logout'
+        on_release: app.logout_button()
+        elevation_normal: 12
+        pos_hint: {'x': .8, 'y': .04}
+
 <DialogContent>:
     orientation: "vertical"
     spacing: "10dp"

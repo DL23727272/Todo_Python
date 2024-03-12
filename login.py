@@ -24,7 +24,7 @@ class LoginScreen(Screen):
         self.result_label = TextInput(hint_text='', disabled=True, size_hint=(None, None), size=(200, 40), pos_hint={'center_x': 0.5},
                                        foreground_color=(1, 1, 1, 1))
 
-        login_btn = Button(text='Login', size_hint=(None, None), size=(100, 40), pos_hint={'center_x': 0.5}, background_color=(1, 1, 0, 1))
+        login_btn = Button(text='Login', size_hint=(None, None), size=(100, 40), pos_hint={'center_x': 0.9, 'center_y': 0.8}, background_color=(1, 1, 0, 1))
         login_btn.bind(on_press=self.login)
 
         layout.add_widget(self.result_label)
