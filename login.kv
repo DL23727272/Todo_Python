@@ -1,15 +1,25 @@
+# login.kv
 MDScreen:
     md_bg_color: [136/255, 101/255, 216/255, 1]
 
     MDCard: 
         size_hint: None, None
-        size: '320dp', '400dp'
+        size:  320, 500
         pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-        elevation: 5
+        elevation: 15
         padding: 20
-        spacing: '30dp'
+        spacing: 30
         orientation: 'vertical'
 
+        MDLabel:
+            id: error_label
+            text: ''
+            font_style: 'Button'
+            font_size: 15
+            halign: 'center'
+            size_hint_y: None
+            height: self.texture_size[1]
+        
         MDLabel:
             text: 'Login'
             font_style: 'Button'
@@ -17,21 +27,35 @@ MDScreen:
             halign: 'center'
             size_hint_y: None
             height: self.texture_size[1]
+            padding_y: 15
 
         MDTextFieldRect:
             id: username_input
-            icon_right: "account"
             hint_text: "Username"
-            hint_animation: False 
-            size_hint_y: None
-            height: "40dp"
+            icon_right: "account"
+            size_hint_x: None
+            width: 220
+            font_size: 20
             pos_hint: {'center_x': 0.5}
+            color_active: [1, 1, 1, 1]
 
         MDTextFieldRect:
             id: password_input
-            icon_right: "account"
             hint_text: "Password"
-            hint_animation: False 
-            size_hint_y: None
-            height: "40dp"
+            icon_right: "eye-off"
+            size_hint_x: None
+            width: 220
+            font_size: 20
             pos_hint: {'center_x': 0.5}
+            color_active: [1, 1, 1, 1]
+            password: True
+        
+        MDRoundFlatButton:
+            text: "LOGIN"
+            pos_hint: {"center_x": .5}
+            font_size: 15
+            on_press: app.login()
+
+        Widget:
+            size_hint_y: None
+            height: 30

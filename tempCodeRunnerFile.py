@@ -1,1 +1,1 @@
-None
+error_label = self.root.ids.error_label
