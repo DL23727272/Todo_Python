@@ -19,17 +19,21 @@ class Login(MDApp):
         username = 'DL'
         password = '123'
 
-        if entered_username == username and entered_password == password:
+        if entered_username == '' and entered_password == '':
+            error_label.text = 'Empty username and password!'
+        elif entered_username == '':
+            error_label.text = 'Empty username!'
+        elif entered_password == '':
+            error_label.text = 'Empty password!'
+        elif entered_username == username and entered_password == password:
             error_label.text = 'GO!'
             # Open the main.py application
             subprocess.Popen(["python", "main.py"])
 
             # Close the login.py application
             os._exit(0)
-        elif username == '' and password == '':
-            error_label.text = 'Empty!'
-        elif username != 'DL' or password != '123':
-            error_label.text = 'Wrong input!'
+        elif entered_username != 'DL' or entered_password != '123':
+            error_label.text = 'Wrong username or password!'
         else:
             error_label.text = 'Failed.'
 
