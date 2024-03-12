@@ -14,12 +14,15 @@ MDFloatLayout:
             id: container
 
 
+    # Button for adding task 
     MDFloatingActionButton:
         icon: 'plus-thick'
         on_release: app.show_task_dialog()
         elevation_normal: 12
         pos_hint: {'x': .45 , 'y': .04}
 
+
+    # Button for logout
     MDFloatingActionButton:
         icon: 'logout'
         on_release: app.logout_button()
