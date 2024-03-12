@@ -110,8 +110,8 @@ class MainApp(MDApp):
         task.text = ''
         
     def logout_button(self):
-         subprocess.Popen(["python", "login.py"])
-         os._exit(0)
+        subprocess.Popen(["python", "login.py"])
+        os._exit(0)
 
 if __name__ == '__main__':
     app = MainApp()

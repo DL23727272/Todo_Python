@@ -1,0 +1,37 @@
+MDScreen:
+    md_bg_color: [136/255, 101/255, 216/255, 1]
+
+    MDCard: 
+        size_hint: None, None
+        size: '320dp', '400dp'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        elevation: 5
+        padding: 20
+        spacing: '30dp'
+        orientation: 'vertical'
+
+        MDLabel:
+            text: 'Login'
+            font_style: 'Button'
+            font_size: 45
+            halign: 'center'
+            size_hint_y: None
+            height: self.texture_size[1]
+
+        MDTextFieldRect:
+            id: username_input
+            icon_right: "account"
+            hint_text: "Username"
+            hint_animation: False 
+            size_hint_y: None
+            height: "40dp"
+            pos_hint: {'center_x': 0.5}
+
+        MDTextFieldRect:
+            id: password_input
+            icon_right: "account"
+            hint_text: "Password"
+            hint_animation: False 
+            size_hint_y: None
+            height: "40dp"
+            pos_hint: {'center_x': 0.5}
