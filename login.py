@@ -26,7 +26,6 @@ class Login(MDApp):
         elif entered_password == '':
             error_label.text = 'Empty password!'
         elif entered_username == username and entered_password == password:
-            error_label.text = 'GO!'
             # Open the main.py application
             subprocess.Popen(["python", "main.py"])
 
