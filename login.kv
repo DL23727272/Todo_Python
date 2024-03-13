@@ -1,10 +1,9 @@
-# login.kv
 MDScreen:
     md_bg_color: [136/255, 101/255, 216/255, 1]
 
-    MDCard: 
+    MDCard:
         size_hint: None, None
-        size:  320, 500
+        size: 320, 500
         pos_hint: {'center_x': 0.5, 'center_y': 0.5}
         elevation: 10
         padding: 20
@@ -19,7 +18,7 @@ MDScreen:
             size_hint_y: None
             height: self.texture_size[1]
             padding_y: 15
-        
+
         MDLabel:
             id: error_label
             text: ''
@@ -32,25 +31,31 @@ MDScreen:
         BoxLayout:
             orientation: 'horizontal'
             spacing: dp(8)
+            size_hint_y: None
+            height: self.minimum_height  
 
             MDIcon:
                 icon: 'account'
                 theme_text_color: 'Custom'
                 text_color: 0, 0, 0, 1
                 pos_hint: {'center_y': 0.5}
-            
+
             MDTextFieldRect:
                 id: username_input
                 hint_text: "Username"
                 size_hint_x: None
                 width: 220
-                font_size: 20
+                height: self.minimum_height  
+                font_size: 15
                 pos_hint: {'center_x': 0.5}
                 color_active: [1, 1, 1, 1]
+                padding: [10, 10, 0, 10] 
 
         BoxLayout:
             orientation: 'horizontal'
             spacing: dp(8)
+            size_hint_y: None
+            height: self.minimum_height  
 
             MDIcon:
                 icon: 'eye-off'
@@ -63,13 +68,13 @@ MDScreen:
                 hint_text: "Password"
                 size_hint_x: None
                 width: 220
-                font_size: 20
+                height: self.minimum_height 
+                font_size: 15
                 pos_hint: {'center_x': 0.5}
                 color_active: [1, 1, 1, 1]
                 password: True
+                padding: [10, 10, 0, 10]  
 
-           
-        
         MDRoundFlatButton:
             text: "LOGIN"
             pos_hint: {"center_x": .5}
