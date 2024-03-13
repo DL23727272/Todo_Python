@@ -29,26 +29,46 @@ MDScreen:
             size_hint_y: None
             height: self.texture_size[1]
 
-        MDTextFieldRect:
-            id: username_input
-            hint_text: "Username"
-            icon_right: "account"
-            size_hint_x: None
-            width: 220
-            font_size: 20
-            pos_hint: {'center_x': 0.5}
-            color_active: [1, 1, 1, 1]
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: dp(8)
 
-        MDTextFieldRect:
-            id: password_input
-            hint_text: "Password"
-            icon_right: "eye-off"
-            size_hint_x: None
-            width: 220
-            font_size: 20
-            pos_hint: {'center_x': 0.5}
-            color_active: [1, 1, 1, 1]
-            password: True
+            MDIcon:
+                icon: 'account'
+                theme_text_color: 'Custom'
+                text_color: 0, 0, 0, 1
+                pos_hint: {'center_y': 0.5}
+            
+            MDTextFieldRect:
+                id: username_input
+                hint_text: "Username"
+                size_hint_x: None
+                width: 220
+                font_size: 20
+                pos_hint: {'center_x': 0.5}
+                color_active: [1, 1, 1, 1]
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: dp(8)
+
+            MDIcon:
+                icon: 'eye-off'
+                theme_text_color: 'Custom'
+                text_color: 0, 0, 0, 1
+                pos_hint: {'center_y': 0.5}
+
+            MDTextFieldRect:
+                id: password_input
+                hint_text: "Password"
+                size_hint_x: None
+                width: 220
+                font_size: 20
+                pos_hint: {'center_x': 0.5}
+                color_active: [1, 1, 1, 1]
+                password: True
+
+           
         
         MDRoundFlatButton:
             text: "LOGIN"
