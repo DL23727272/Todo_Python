@@ -1,14 +1,21 @@
 MDFloatLayout:
-    MDLabel:
-        id: task_label
-        halign: 'center'
-        markup: True
-        text: "[u][size=58][b]Ubraek Today[/b][/size][/u]"
-        pos_hint: {'y': .45}
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: 1, 1, 0.8, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        MDLabel:
+            halign: 'center'
+            markup: True
+            text: "[size=58][b]Ubraek Today[/b][/size]"
+            pos_hint: {'y': .45}
 
     ScrollView:
         pos_hint: {'center_y': .5, 'center_x': .5}
         size_hint: .9, .8
+        
 
         MDList:
             id: container
