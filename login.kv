@@ -40,7 +40,7 @@ MDScreen:
                 text_color: 0, 0, 0, 1
                 pos_hint: {'center_y': 0.5}
 
-            MDTextFieldRect:
+            MDTextField:
                 id: username_input
                 hint_text: "Username"
                 size_hint_x: None
@@ -50,6 +50,7 @@ MDScreen:
                 pos_hint: {'center_x': 0.5}
                 color_active: [1, 1, 1, 1]
                 padding: [10, 10, 0, 10] 
+                
 
         BoxLayout:
             orientation: 'horizontal'
@@ -63,7 +64,7 @@ MDScreen:
                 text_color: 0, 0, 0, 1
                 pos_hint: {'center_y': 0.5}
 
-            MDTextFieldRect:
+            MDTextField:
                 id: password_input
                 hint_text: "Password"
                 size_hint_x: None
